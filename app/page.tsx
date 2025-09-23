@@ -1,24 +1,27 @@
 "use client";
-import { fetchPosts } from "@/apis/mock.api";
+
+import { Suspense } from "react";
 import ImRobotComponent from "@/components/ImRobotComponent";
 import ListOfPostComponent from "@/components/ListOfPostComponent";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
-
-export default function Home() {
+function PageContent() {
   const params = useSearchParams();
-  const router = useRouter();
+  const tab = params.get("tab") || "imrobot";
 
-  const tabs = params.get("tab") || "imrobot";
-
-
-
-  if (tabs == "imrobot") {
+  if (tab === "imrobot") {
     return <ImRobotComponent />;
-  } else if (tabs == "list") {
+  } else if (tab === "list") {
     return <ListOfPostComponent />;
   } else {
-    return <div></div>;
+    return <div />;
   }
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
 }

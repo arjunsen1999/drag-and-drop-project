@@ -1,24 +1,27 @@
 "use client";
 import { Shield } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ImRobotComponent() {
-  const params = useSearchParams();
+  // ✅ router has proper type from next/navigation
   const router = useRouter();
-  const [token, setToken] = useState<string | null | undefined>(null);
-  const onChange = (value: string | null | undefined) => {
+
+  // ✅ token is a string | null
+  const [token, setToken] = useState<string | null>(null);
+
+  // ✅ onChange receives string | null
+  const onChange = (value: string | null) => {
     setToken(value);
   };
-  const tabs = params.get("tab") || "imrobot";
 
   const handleClick = () => {
     if (token) {
-        console.log("token", token)
       router.replace("?tab=list");
     }
   };
+
   return (
     <div className="w-full flex items-center justify-center min-h-screen bg-blue-100">
       <div className="w-[60vw] flex flex-col gap-5">
@@ -32,7 +35,7 @@ export default function ImRobotComponent() {
         </div>
         <div className="w-full flex items-center justify-center">
           <ReCAPTCHA
-            sitekey={`${process.env.NEXT_PUBLIC_SITE_KEY}`}
+            sitekey={process.env.NEXT_PUBLIC_SITE_KEY ?? ""}
             onChange={onChange}
           />
         </div>
