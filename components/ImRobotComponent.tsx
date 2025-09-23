@@ -22,6 +22,8 @@ export default function ImRobotComponent() {
     }
   };
 
+  
+
   return (
     <div className="w-full flex items-center justify-center min-h-screen bg-blue-100">
       <div className="w-[60vw] flex flex-col gap-5">
