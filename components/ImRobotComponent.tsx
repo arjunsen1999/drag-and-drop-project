@@ -22,7 +22,7 @@ export default function ImRobotComponent() {
     }
   };
 
-  
+
 
   return (
     <div className="w-full flex items-center justify-center min-h-screen bg-blue-100">
@@ -37,7 +37,7 @@ export default function ImRobotComponent() {
         </div>
         <div className="w-full flex items-center justify-center">
           <ReCAPTCHA
-            sitekey={"6Leil9IrAAAAAJtftCY0-tdDxRYE6zXzhKz_g07x"}
+            sitekey={"6LfpptIrAAAAAL8iztL8zftMJBeZrrysftSBDfcq"}
             onChange={onChange}
           />
         </div>
