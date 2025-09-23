@@ -65,7 +65,20 @@ export default function ListOfPostComponent() {
       <div className="w-[90vw] bg-blue-600 h-[200px] rounded-2xl !mt-8 flex flex-col justify-center !px-8">
         <h1 className="text-2xl font-semibold text-white">List Page</h1>
         <p className="text-white text-sm">
-          Example description for the list page. Replace with your own content.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias
+          voluptates architecto aliquid illum dignissimos molestiae dolorum
+          dolor, ducimus unde repellat ratione debitis dolore cupiditate libero
+          quis labore. Quia enim rerum voluptatem rem harum debitis quod
+          accusantium in quasi, assumenda cupiditate fugiat, eius iste dolore
+          voluptatibus sapiente atque qui eveniet culpa at sequi magni quaerat,
+          voluptates maxime? Facere sequi obcaecati odio dolorum aperiam labore
+          rerum laborum totam sed doloremque blanditiis odit autem recusandae
+          magni dignissimos praesentium dicta error, ex aut itaque nisi fugiat?
+          Obcaecati laudantium et nemo id culpa quibusdam architecto, sunt
+          tenetur adipisci quisquam a ex molestiae ratione facere fugiat
+          voluptatum error nisi mollitia maxime voluptas! Repudiandae saepe, sit
+          quibusdam temporibus incidunt iure omnis. Tenetur accusamus nemo dicta
+          qui asperiores.....
         </p>
       </div>
 
