@@ -9,6 +9,9 @@ function PageContent() {
   const params = useSearchParams();
   const tab = params.get("tab") || "imrobot";
 
+
+  
+
   if (tab === "imrobot") {
     return <ImRobotComponent />;
   } else if (tab === "list") {
