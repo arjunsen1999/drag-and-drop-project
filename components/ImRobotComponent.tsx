@@ -37,7 +37,7 @@ export default function ImRobotComponent() {
         </div>
         <div className="w-full flex items-center justify-center">
           <ReCAPTCHA
-            sitekey={"6LfpptIrAAAAAL8iztL8zftMJBeZrrysftSBDfcq"}
+            sitekey={`${process.env.NEXT_PUBLIC_SITE_KEY}`}
             onChange={onChange}
           />
 
